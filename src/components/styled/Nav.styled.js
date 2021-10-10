@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   ul {
+    flex-direction: column;
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     background-color: #321;
-    height: 70px;
-    padding-right: 15px;
+    list-style: none;
+    display: flex;
+    width: 100%;
+
     img {
       height: 50px;
       width: 50px;
     }
 
-    list-style: none;
-
-    display: flex;
-    width: 100%;
+    li {
+      padding: 5px;
+    }
 
     li:nth-child(1) a {
       display: flex;
@@ -25,23 +27,33 @@ const Nav = styled.nav`
       align-items: center;
       justify-content: center;
     }
-    li:nth-child(1) a:hover {
-      text-decoration: none;
-    }
-
-    li:nth-child(2) {
-      margin-left: auto;
-    }
-    li {
-      padding: 10px 20px;
-    }
 
     a {
       text-decoration: none;
       color: white;
     }
-    a:hover {
-      text-decoration: underline;
+  }
+  @media (min-width: 650px) {
+    ul {
+      flex-direction: row;
+      padding-right: 15px;
+      height: 70px;
+
+      li {
+        padding: 10px 20px;
+      }
+
+      li:nth-child(2) {
+        margin-left: auto;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      li:nth-child(1) a:hover {
+        text-decoration: none;
+      }
     }
   }
 `;
