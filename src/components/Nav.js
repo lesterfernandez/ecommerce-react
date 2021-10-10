@@ -1,6 +1,6 @@
-import StyledNav from "./styled/Nav.styled";
-import logo from "../logo192.png";
 import { Link } from "react-router-dom";
+import logo from "../logo192.png";
+import StyledNav from "./styled/Nav.styled";
 
 const Nav = () => {
   return (
@@ -9,14 +9,11 @@ const Nav = () => {
         <li>
           <Link to="/">
             <img src={logo} alt="logo" />
-            <p>React Shop</p>
+            <p>React Groceries</p>
           </Link>
         </li>
         <li>
           <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
         </li>
         <li>
           <Link to="/shop">Shop</Link>
