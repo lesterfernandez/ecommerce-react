@@ -5,6 +5,11 @@ const Shop = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
+
+  p {
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+  }
 `;
 
 export default Shop;
