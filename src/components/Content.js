@@ -1,16 +1,19 @@
 import { Route, Switch } from "react-router-dom";
 import Cart from "./Cart";
-import Home from "./Home";
 import Shop from "./Shop";
 import StyledContent from "./styled/Content.styled";
 
-const Content = () => {
+const Content = ({ username }) => {
   return (
     <StyledContent>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/shop" component={Shop} />
-        <Route path="/cart" component={Cart} />
+        <Route path="/" exact>
+          <Shop username={username} />
+        </Route>
+
+        <Route path="/cart">
+          <Cart />
+        </Route>
       </Switch>
     </StyledContent>
   );

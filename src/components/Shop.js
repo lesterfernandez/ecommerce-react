@@ -1,7 +1,11 @@
 import StyledShop from "./styled/Shop.styled";
 
-const Shop = () => {
-  return <StyledShop>Shop</StyledShop>;
+const Shop = ({ username }) => {
+  return (
+    <StyledShop>
+      <h1>Welcome {username}</h1>
+    </StyledShop>
+  );
 };
 
 export default Shop;
