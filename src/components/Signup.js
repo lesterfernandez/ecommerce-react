@@ -22,6 +22,7 @@ const Signup = ({ setUsername }) => {
             <input
               type="text"
               name="username"
+              required
               value={values.username}
               onChange={handleChange}
             />
