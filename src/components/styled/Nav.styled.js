@@ -18,6 +18,18 @@ const Nav = styled.nav`
 
     li {
       padding: 5px;
+      position: relative;
+      span {
+        background-color: #44e;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        font-size: 1rem;
+        position: absolute;
+        right: -25px;
+        bottom: 5px;
+      }
     }
 
     li:nth-child(1) a {
@@ -41,6 +53,10 @@ const Nav = styled.nav`
 
       li {
         padding: 10px 20px;
+        span {
+          top: 0;
+          right: -5px;
+        }
       }
 
       li:nth-child(2) {

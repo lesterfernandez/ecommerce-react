@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../logo192.png";
 import StyledNav from "./styled/Nav.styled";
 
-const Nav = () => {
+const Nav = ({ cartLength }) => {
   return (
     <StyledNav>
       <ul>
@@ -16,7 +16,9 @@ const Nav = () => {
           <Link to="/">Shop</Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">
+            Cart <span>{cartLength}</span>
+          </Link>
         </li>
       </ul>
     </StyledNav>

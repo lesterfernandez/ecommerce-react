@@ -3,9 +3,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Content from "./components/Content";
 import Nav from "./components/Nav";
 import Signup from "./components/Signup";
+import useCart from "./components/useCart";
 
 function App() {
   const [username, setUsername] = useState(localStorage.getItem("username"));
+
+  const [cart, addToCart, clearCart] = useCart([]);
 
   return (
     <div className="App">
@@ -13,8 +16,13 @@ function App() {
         <Signup setUsername={setUsername} />
       ) : (
         <Router>
-          <Nav />
-          <Content username={username} />
+          <Nav cartLength={cart.length} />
+          <Content
+            username={username}
+            addToCart={addToCart}
+            cart={cart}
+            clearCart={clearCart}
+          />
         </Router>
       )}
     </div>
