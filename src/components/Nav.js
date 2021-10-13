@@ -16,9 +16,7 @@ const Nav = ({ cartLength }) => {
           <Link to="/">Shop</Link>
         </li>
         <li>
-          <Link to="/cart">
-            Cart <span>{cartLength}</span>
-          </Link>
+          <Link to="/cart">Cart {cartLength > 0 && <span>{cartLength}</span>}</Link>
         </li>
       </ul>
     </StyledNav>
