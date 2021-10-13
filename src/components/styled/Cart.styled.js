@@ -6,6 +6,9 @@ const Cart = styled.div`
   flex-direction: column;
   align-items: center;
 
+  h1 {
+    margin: 50px 0 25px;
+  }
   & > div {
     max-width: 500px;
     width: 90%;
